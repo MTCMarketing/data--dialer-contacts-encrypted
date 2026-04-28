@@ -1,1 +1,43 @@
-test
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Encrypted Contact Viewer</title>
+</head>
+<body>
+
+  <h2>Load Contact</h2>
+
+  <!-- 🔹 TEST MODE TOGGLE -->
+  <label>
+    <input type="radio" name="mode" value="prod" checked />
+    Production
+  </label>
+
+  <label>
+    <input type="radio" name="mode" value="test" />
+    Test Mode
+  </label>
+
+  <br><br>
+
+  <!-- STEP 1 -->
+  <input id="contactId" type="text" placeholder="Enter ID (e.g. 2012033733)" />
+  <button onclick="loadData()">Load</button>
+
+  <hr>
+
+  <!-- STEP 2 -->
+  <div id="decryptSection" style="display:none;">
+    <input id="password" type="password" placeholder="Enter password" />
+    <button onclick="decryptData()">Decrypt</button>
+  </div>
+
+  <hr>
+
+  <pre id="output"></pre>
+
+  <script src="app.js"></script>
+
+</body>
+</html>
